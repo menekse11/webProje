@@ -1,13 +1,7 @@
 import { Navigate, Outlet } from "react-router";
 import { Link } from "react-router";
 import { useLoggedInUsersContext } from "../Auth/LoggedInUserContext";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarCollapse,
-  NavbarLink,
-  NavbarToggle,
-} from "flowbite-react";
+import { Navbar, NavbarToggle } from "flowbite-react";
 import Cookies from "universal-cookie";
 
 const AdminLayout = () => {
