@@ -31,7 +31,9 @@ export class BookService {
   }
 
   async listAll() {
-    return this.booksRepository.find();
+    return this.booksRepository.find({
+      order: { id: 'ASC' },
+    });
   }
 
   getOne(id: number) {
