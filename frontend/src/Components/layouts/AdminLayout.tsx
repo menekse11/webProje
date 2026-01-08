@@ -29,17 +29,17 @@ const AdminLayout = () => {
   return (
     <>
       <Navbar fluid rounded className="mb-6">
-        <NavbarBrand as={Link} to="/">
+        <NavbarBrand as={Link} href="/">
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             Admin Panel
           </span>
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>
-          <NavbarLink as={Link} to="/admin/usersTable">
+          <NavbarLink as={Link} href="/admin/usersTable">
             Kullanıcılar
           </NavbarLink>
-          <NavbarLink as={Link} to="/admin/booksTable">
+          <NavbarLink as={Link} href="/admin/usersTable">
             Kitaplar
           </NavbarLink>
           <NavbarLink href="#" onClick={handleLogout}>

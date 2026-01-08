@@ -25,7 +25,7 @@ export function EditUserModal({ fetchUser, user, show, onClose }: Props) {
   const [lastName, setLastName] = useState(user.lastName);
   const [username, setUsername] = useState(user.username);
   const [email, setEmail] = useState(user.email);
-  const [role, setRole] = useState(user.role);
+  const [role, setRole] = useState<"admin" | "user">(user.role);
   function handleUpdate() {
     const body = { firstName, lastName, username, email, role };
 
@@ -76,7 +76,11 @@ export function EditUserModal({ fetchUser, user, show, onClose }: Props) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Select value={role} onChange={(e) => setRole(e.target.value)}>
+        <Select
+          value={role}
+          onChange={(e) => setRole(e.target.value as "admin" | "user")}
+        >
+          {" "}
           <option value="user">User</option>
           <option value="admin">Admin</option>
         </Select>

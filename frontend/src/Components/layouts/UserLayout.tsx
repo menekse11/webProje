@@ -28,20 +28,20 @@ const UserLayout = () => {
   return (
     <>
       <Navbar fluid rounded className="mb-6">
-        <NavbarBrand as={Link} to="/">
+        <NavbarBrand as={Link} href="/">
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             Kitap Portali
           </span>
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>
-          <NavbarLink as={Link} to="/user/profile">
+          <NavbarLink as={Link} href="/user/profile">
             Profilim
           </NavbarLink>
-          <NavbarLink as={Link} to="/user/books">
+          <NavbarLink as={Link} href="/user/books">
             Kitaplar
           </NavbarLink>
-          <NavbarLink as={Link} to="/user/booklist">
+          <NavbarLink as={Link} href="/user/booklist">
             Kitap Listesi
           </NavbarLink>
           <NavbarLink href="#" onClick={handleLogout}>

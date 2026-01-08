@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Modal } from "flowbite-react";
+import { Button } from "flowbite-react";
 import type { Book } from "../../../../types/boook";
 import { api } from "../../../../helper/api";
 import { toast } from "sonner";
