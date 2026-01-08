@@ -28,20 +28,24 @@ const UserLayout = () => {
   return (
     <>
       <Navbar fluid rounded className="mb-6">
-        <NavbarBrand as={Link} href="/">
+        {/* @ts-expect-ignore */}
+        <NavbarBrand as={Link} to="/">
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             Kitap Portali
           </span>
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>
-          <NavbarLink as={Link} href="/user/profile">
+          {/* @ts-expect-ignore */}
+          <NavbarLink as={Link} to="/user/profile">
             Profilim
           </NavbarLink>
-          <NavbarLink as={Link} href="/user/books">
+          {/* @ts-expect-ignore */}
+          <NavbarLink as={Link} to="/user/books">
             Kitaplar
           </NavbarLink>
-          <NavbarLink as={Link} href="/user/booklist">
+          {/* @ts-expect-ignore */}
+          <NavbarLink as={Link} to="/user/booklist">
             Kitap Listesi
           </NavbarLink>
           <NavbarLink href="#" onClick={handleLogout}>
