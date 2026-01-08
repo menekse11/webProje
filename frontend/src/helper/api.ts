@@ -1,6 +1,6 @@
 import axios from "axios";
 const baseURL = import.meta.env.PROD
-  ? "https://RAILWAY-URL-BURAYA.up.railway.app/"
+  ? "webproje-production.up.railway.app"
   : "http://localhost:3000/";
 
 export const api = axios.create({
