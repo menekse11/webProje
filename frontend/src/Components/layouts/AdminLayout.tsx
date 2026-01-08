@@ -29,27 +29,32 @@ const AdminLayout = () => {
   return (
     <>
       <Navbar fluid rounded className="mb-6">
-        {/* @ts-expect-ignore */}
-        <NavbarBrand as={Link} to="/">
+        <Link to="/" className="flex items-center">
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             Admin Panel
           </span>
-        </NavbarBrand>
+        </Link>
         <NavbarToggle />
-        <NavbarCollapse>
-          {/* @ts-expect-ignore */}
-          <NavbarLink as={Link} to="/admin/usersTable">
+        <div className="flex md:order-2 space-x-4">
+          <Link
+            to="/admin/usersTable"
+            className="text-gray-700 hover:text-blue-600"
+          >
             Kullanıcılar
-          </NavbarLink>
-          {/* @ts-expect-ignore */}
-          <NavbarLink as={Link} to="/admin/usersTable">
+          </Link>
+          <Link
+            to="/admin/booksTable"
+            className="text-gray-700 hover:text-blue-600"
+          >
             Kitaplar
-          </NavbarLink>
-          {/* @ts-expect-ignore */}
-          <NavbarLink href="#" to={handleLogout}>
+          </Link>
+          <button
+            onClick={handleLogout}
+            className="text-gray-700 hover:text-red-600"
+          >
             Çıkış Yap
-          </NavbarLink>
-        </NavbarCollapse>
+          </button>
+        </div>
       </Navbar>
 
       <Outlet />
